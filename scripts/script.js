@@ -1,0 +1,14 @@
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+
+if (menuIcon && navbar) {
+	menuIcon.addEventListener('click', () => {
+		navbar.classList.toggle('active');
+	});
+
+	document.querySelectorAll('.navbar a').forEach((link) => {
+		link.addEventListener('click', () => {
+			navbar.classList.remove('active');
+		});
+	});
+}
